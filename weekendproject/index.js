@@ -1,5 +1,8 @@
 let  readlineSync  =  require('readline-sync');
 
+// COLORS
+let chalk = require('chalk')
+
 // CHARACTERS
 
 const character = [
@@ -18,13 +21,13 @@ let characterToSelect;
 
 // BEGIN THE JOURNEY
 
-console.log('Welcome to this fabulous game...');
+console.log(chalk.bold.bgRed('    WELCOME: CONSOLE TO BATTLEQUEST    '));
 console.log('Here you go to get a spectacular journey!');
 console.log('But first select your character TO BEGIN THE JOURNEY ');
 console.log(`-----------------------------------------------------`)
-console.log(`${character[0].name.toLocaleUpperCase()} LIFE: ${character[0].life} DAMAGE: ${character[0].dmg}`)
-console.log(`${character[1].name.toLocaleUpperCase()} LIFE: ${character[1].life} DAMAGE: ${character[1].dmg}`)
-console.log(`${character[2].name.toLocaleUpperCase()} LIFE: ${character[2].life} DAMAGE: ${character[2].dmg}`)
+console.log(chalk.cyan(`${character[0].name.toLocaleUpperCase()} LIFE: ${character[0].life} DAMAGE: ${character[0].dmg}`))
+console.log(chalk.yellow(`${character[1].name.toLocaleUpperCase()} LIFE: ${character[1].life} DAMAGE: ${character[1].dmg}`))
+console.log(chalk.magenta(`${character[2].name.toLocaleUpperCase()} LIFE: ${character[2].life} DAMAGE: ${character[2].dmg}`))
 console.log(`-----------------------------------------------------`)
 console.log(`Is case sensitive, please put the name in UPPERCASE`)
 let selectionCharacter = readlineSync.question('Options: WIZARD, KNIGHT, ARCHER .... ');
@@ -81,7 +84,7 @@ finishSelection(selectionCharacter);
 console.log('Well in this game only have AN OPORTUNITY to win')
 console.log('You need take the best way to finish this ADVENTURE')
 console.log(`-----------------------------------------------------`)
-console.log('THE CHAPTER ONE: THE FOREST')
+console.log(chalk.bold.bgRed('THE CHAPTER ONE: THE FOREST'));
 console.log(`-----------------------------------------------------`)
 console.log('You need pass for this forest and you have three ways')
 console.log('If you have a bad selection you can finish this journey so fast!')
@@ -108,19 +111,19 @@ const firstFight = () => {
     if(chapterOneRoad[chapterOne] === chapterOneRoad[0]){
         console.log(`OMG! what is that?.... Oh! is a ${terribleBeast[0].name} have ${terribleBeast[0].life} points of life.`)
         console.log(`-----------------------------------------------------`)
-        console.log(`---------------------GO TO FIGHT---------------------`)
+        console.log(chalk.bold.red.bgWhite(`---------------------GO TO FIGHT---------------------`))
     
         return theBeastToFight = terribleBeast[0];     
     }else if(chapterOneRoad[chapterOne] === chapterOneRoad[1]){
         console.log(`OMG! what is that?.... Oh! is a ${terribleBeast[1].name} have ${terribleBeast[1].life} points of life.`)
         console.log(`-----------------------------------------------------`)
-        console.log(`---------------------GO TO FIGHT---------------------`)
+        console.log(chalk.bold.cyan.bgWhite(`---------------------GO TO FIGHT---------------------`))
         
         return theBeastToFight = terribleBeast[1]
     }else if(chapterOneRoad[chapterOne] === chapterOneRoad[2]){
         console.log(`OMG! what is that?.... Oh! is a ${terribleBeast[2].name} have ${terribleBeast[2].life} points of life.`)
         console.log(`-----------------------------------------------------`)
-        console.log(`---------------------GO TO FIGHT---------------------`)
+        console.log(chalk.bold.black.bgWhite(`---------------------GO TO FIGHT---------------------`))
        
         return theBeastToFight = terribleBeast[2]
     }else{
@@ -189,7 +192,7 @@ recoverCharacter(recoverActive)
 
 // CHAPTER TWO
 console.log(`-----------------------------------------------------`)
-console.log('CHAPTER TWO: THE MOUNTAIN')
+console.log(chalk.bold.bgRed('CHAPTER TWO: THE MOUNTAIN'))
 console.log(`-----------------------------------------------------`)
 console.log(`You need pass for this mountain but is so hot inside... WATCH OUT!`)
 console.log('Inside the mountain have four ways... or I think so! you need select ONE!')
@@ -217,28 +220,28 @@ const secondFight = () => {
         console.log(`I think it's the best option, see the exit very close ... `)
         console.log(`Oh no! they are too many is an ${mountainCreature[0].name} have ${mountainCreature[0].life} points of life.`)
         console.log(`-----------------------------------------------------`)
-        console.log(`---------------------GO TO FIGHT---------------------`)
+        console.log(chalk.bold.red.bgWhite(`---------------------GO TO FIGHT---------------------`))
         return mountCreatureToFight = mountainCreature[0];     
 
     }else if(chapterTwoRoad[chapterTwo] === chapterTwoRoad[1]){
         console.log(`The cave is over but everything smells like burning here ... MMM! A bonfire? `)
         console.log(`NO!!! is a ${mountainCreature[1].name} have ${mountainCreature[1].life} points of life.`)
         console.log(`-----------------------------------------------------`)
-        console.log(`---------------------GO TO FIGHT---------------------`)
+        console.log(chalk.bold.black.bgWhite(`---------------------GO TO FIGHT---------------------`))
         return mountCreatureToFight = mountainCreature[1]
 
     }else if(chapterTwoRoad[chapterTwo] === chapterTwoRoad[2]){
         console.log(`Seriously I think this is the worst way to choose I feel like I'm going to hell`)
         console.log(`I knew, I'm in hell and that is a ${mountainCreature[2].name} have ${mountainCreature[2].life} points of life.`)
         console.log(`-----------------------------------------------------`)
-        console.log(`---------------------GO TO FIGHT---------------------`)
+        console.log(chalk.bold.cyan.bgWhite(`---------------------GO TO FIGHT---------------------`))
         return mountCreatureToFight = mountainCreature[2]
 
     }else if(chapterTwoRoad[chapterTwo] === chapterTwoRoad[3]){
         console.log(`Who chooses to go down some hot stairs? \nWhat's up man? \nWhat are you thinking?`)
         console.log(`Oh men! WE NEED TO RUN!!! RUN...\nis a ${mountainCreature[3].name} have ${mountainCreature[3].life} points of life .`)
         console.log(`-----------------------------------------------------`)
-        console.log(`---------------------GO TO FIGHT---------------------`)
+        console.log(chalk.bold.red.bgWhite(`---------------------GO TO FIGHT---------------------`))
         return mountCreatureToFight = mountainCreature[3]
 
     }else{
@@ -287,7 +290,7 @@ console.log(`I can't help you with that, but thanks for your battles, the DMG sk
 console.log(`JUST NOW! your regular DMG is ${characterToSelect.maxPower} and get the --DON-- of FIRST STRIKE`)
 console.log('I think you have an opportuny to complete this journey! but not is EASY')
 console.log(`-----------------------------------------------------`)
-console.log('CHAPTER THREE: THE UNKNOW')
+console.log(chalk.bold.bgRed('CHAPTER THREE: THE UNKNOW'))
 console.log(`-----------------------------------------------------`)
 console.log(`You survived the battle in the FOREST vs ${theBeastToFight.name}. \nYou survived the battle on the MOUNTAIN vs ${mountCreatureToFight.name}. \nNow you have to fight the UNKNOW and survive`)
 console.log(`There is only ONE way and you don't know what you will fight against this time ... YOU HAVE NO CHOICE`)
@@ -318,14 +321,17 @@ const firstWaveBattle = () => {
     if(randFirstWave === firstWave[0]){
         console.log(`${firstWave[0].name}...${firstWave[0].description}`)
         console.log(`-----------------------------------------------------`)
+        console.log(chalk.bold.black.bgWhite(`---------------------GO TO FIGHT---------------------`))
         return creatureFirstWave = firstWave[0];     
     }else if(randFirstWave === firstWave[1]){
         console.log(`${firstWave[1].name}...${firstWave[1].description}`)
         console.log(`-----------------------------------------------------`)
+        console.log(chalk.bold.green.bgWhite(`---------------------GO TO FIGHT---------------------`))
         return creatureFirstWave = firstWave[1]
     }else if(randFirstWave === firstWave[2]){
         console.log(`${firstWave[2].name}...${firstWave[2].description}`)
         console.log(`-----------------------------------------------------`)
+        console.log(chalk.bold.cyan.bgWhite(`---------------------GO TO FIGHT---------------------`))
         return creatureFirstWave = firstWave[2]
     }else{
         console.log('What are you here?')
@@ -379,7 +385,7 @@ const secondWave = [
     {name: 'Stone Elemental', life: 200, dmg: 5, description: 'Its a so BIG rock but is slowly'},
     {name: 'Bird of Paradaise', life: 500, maxPower: 500, description: 'Is a stranger Bird... '},
     {name: 'Bearer Of The Heavens', life: 1200, dmg: 10, description: 'It is a giant of solidified lava, he can touch the sky... '},
-    {name: 'Argentum Armor', life: 800, maxPower: 100, description: 'Is a stranger artefact... '},
+    {name: 'Argentum Armor', life: 700, maxPower: 80, description: 'Is a stranger artefact... '},
 ]
 
 let creatureSecondWave;
@@ -390,8 +396,10 @@ const secondWaveBattle = () => {
 
     if(randSecondWave === secondWave[0]){
         console.log(`${secondWave[0].name}...${secondWave[0].description}`)
-        
-        return creatureSecondWave = secondWave[0];     
+        console.log(`-----------------------------------------------------`)
+        console.log(chalk.bold.black.bgWhite(`---------------------GO TO FIGHT---------------------`))
+        return creatureSecondWave = secondWave[0];  
+
     }else if(randSecondWave === secondWave[1]){
         console.log(`${secondWave[1].name}...${secondWave[1].description}`)
         if (readlineSync.keyInYN(`The ${secondWave[1].name} It is a gift of nature... NOW! Select Y for more life or N for more power`)) {
@@ -402,17 +410,20 @@ const secondWaveBattle = () => {
             console.log(`You select more POWER now your DAMAGE is ${characterToSelect.maxPower}`)
         }
         return characterToSelect
+
     }else if(randSecondWave === secondWave[2]){
         console.log(`We can't get out of here alive, but I'll fight with all my power until the end`)
         console.log(`${secondWave[2].name}...${secondWave[2].description}`)
-        
-    
+        console.log(`-----------------------------------------------------`)
+        console.log(chalk.bold.red.bgWhite(`---------------------GO TO FIGHT---------------------`))
         return creatureSecondWave = secondWave[2]
+
     }else if(randSecondWave === secondWave[3]){
         console.log(`${secondWave[3].name}...${secondWave[3].description}`)
         characterToSelect.life = characterToSelect.life + secondWave[3].life
         characterToSelect.maxPower = characterToSelect.maxPower + secondWave[3].maxPower
         return characterToSelect
+
     }else{
         console.log('What are you here?')
     }
@@ -489,18 +500,26 @@ const lastWaveBattle = () => {
 
     if(randLastWave === lastWave[0]){
         console.log(`${lastWave[0].name}...${lastWave[0].description}`)
+        console.log(`-----------------------------------------------------`)
+        console.log(chalk.bold.green.bgWhite(`---------------------GO TO FIGHT---------------------`))
         return creatureLastWave = lastWave[0];
 
     }else if(randLastWave === lastWave[1]){
         console.log(`${lastWave[1].name}...${lastWave[1].description}`)
+        console.log(`-----------------------------------------------------`)
+        console.log(chalk.bold.red.bgWhite(`---------------------GO TO FIGHT---------------------`))
         return creatureLastWave = lastWave[1]
 
     }else if(randLastWave === lastWave[2]){
         console.log(`${lastWave[2].name}...${lastWave[2].description}`)
+        console.log(`-----------------------------------------------------`)
+        console.log(chalk.bold.black.bgWhite(`---------------------GO TO FIGHT---------------------`))
         return creatureLastWave = lastWave[2]
 
     }else if(randLastWave === lastWave[3]){
         console.log(`${lastWave[3].name}...${lastWave[3].description}`)
+        console.log(`-----------------------------------------------------`)
+        console.log(chalk.bold.cyan.bgWhite(`---------------------GO TO FIGHT---------------------`))
         return creatureLastWave = lastWave[3]
 
     }else{
@@ -509,7 +528,6 @@ const lastWaveBattle = () => {
 }
 
 lastWaveBattle(randLastWave)
-console.log(`-----------------------------------------------------`)
 // FIGHT LAST WAVE
 
 const valueLastWave = () => {
