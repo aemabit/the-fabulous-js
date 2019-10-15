@@ -19,6 +19,8 @@ const archer = character[2];
 
 let characterToSelect;
 
+
+
 // BEGIN THE JOURNEY
 
 console.log(chalk.bold.bgRed('    WELCOME: CONSOLE TO BATTLEQUEST    '));
@@ -52,7 +54,7 @@ const finishSelection = ()=>{
         console.log('Please try again to begin the Journey')
         process.exit()
     }
-    
+
 }
 
 finishSelection(selectionCharacter);
@@ -133,6 +135,10 @@ const firstFight = () => {
 }
 
 firstFight(chapterOne)
+
+setTimeout((firstFight) => {
+    
+}, 3000);
 
 // console.log(theBeastToFight)
 
@@ -556,4 +562,3 @@ console.log(`-----------------------------------------------------`)
 valueLastWave(characterToSelect, creatureLastWave)
 
 // FINAL
-console.log(characterToSelect)
