@@ -66,3 +66,33 @@
 //  console.log(Boolean(NaN))
 //  console.log(Boolean([]))
 //  console.log(Boolean({}))
+
+// const character = [
+//     {name: 'Wizard', life: 100, dmg: 50, recover: 30, maxPower: 250},
+//     {name: 'Knight', life: 150, dmg: 30, recover: 50, maxPower: 150},
+//     {name: 'Archer', life: 120, dmg: 55, recover: 10, maxPower: 200}
+// ]
+// 
+// wizard = "wizard"
+// knight = "knight"
+// archer = "archer"
+// 
+// characterToSelect = knight
+// 
+// console.log(`WELL!! You've done it and this does not end here!!` )
+// 
+// const upgradeChar = () => {
+//     if(characterToSelect === wizard){
+//         character.push({name: 'Warlock', life: 145, dmg: 80, recover: 120, maxPower: 400})
+// 
+//     }else if(characterToSelect === knight){
+//         character.push({name: 'Berseker', life: 155, dmg: 120, recover: 60, maxPower: 400})
+//     }else if(characterToSelect === archer){
+//         character.push({name: 'Royal', life: 160, dmg: 100, recover: 80, maxPower: 420})
+//     }else{
+//         console.log('Are you sure WIN the game?')
+//     }
+// }
+// 
+// upgradeChar(characterToSelect)
+// console.log(character)

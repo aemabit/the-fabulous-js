@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Notable', sans-serif;
+}
+
+body.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    height: 95vh;
+    width: 98%;
+}
+
+.main-select-box{
+    height: 80vh;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 8px;
+    background-image: url("img/deafaultSelect.jpg");
+    background-size: cover;
+}
+
+.title-box {
+    display: flex;
+    background-color: #cccccc;
+    height: 40px;
+    width: 100%;
+    font-size: 30px;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    border-radius: 5px 5px 0px 0px;
+}
+
+#kni {
+    margin-top: 50px;
+    width: 180px;
+    transition: transform 0.3s;
+}
+
+#wizard {
+    margin-left: 0;
+}
+
+#wiz {
+    width: 260px;
+    transition: transform 0.3s;
+}
+
+
+#arch {
+    width: 240px;
+    transition: transform 0.3s;
+}
+
+
+#kni:hover,
+#wiz:hover,
+#arch:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#propertiesW {
+    font-size: 15px;
+}
+
+.char-box {
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.char-box:hover span{
+    visibility: visible;
+}
+
+.char-box span{
+    margin-top: 30px;
+    font-size: 25px;
+    color: #f2f2f2;
+    text-shadow: 0 0 50px #fff;
+    cursor: pointer;
+    transition: transform 0.3s;
+    visibility: hidden;
+}
+
+.char-box span:hover{
+    transform: scale(1.1);
+}
+
+#fixed-box {
+    position: fixed;
+    top: 120px;
+    color: #f2f2f2;
+    text-shadow: 0 0 20px #ffffff;
+    font-size: 25px;
+}

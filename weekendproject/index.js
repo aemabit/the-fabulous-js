@@ -19,8 +19,6 @@ const archer = character[2];
 
 let characterToSelect;
 
-
-
 // BEGIN THE JOURNEY
 
 console.log(chalk.bold.bgRed('    WELCOME: CONSOLE TO BATTLEQUEST    '));
