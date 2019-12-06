@@ -31,7 +31,7 @@ const evtEnter = document.querySelector('body')
 function validar(evtEnter) {
   tecla = (document.all) ? evtEnter.keyCode : evtEnter.which;
   if (tecla==13){
-   window.location.href = "file:///home/andres/Desktop/wyncode/c35/the-fabulous-js/weekendproject/selectChar.html" ;
+   window.location.href = "./selectChar.html" ;
   }
 }
 
